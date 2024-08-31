@@ -12,7 +12,7 @@ export default function Navbar() {
                 <li className="text-gray-300">BUILD A PROJECT</li>
                 <li className="text-gray-300">NEWS</li>
                 <li className="text-gray-300 absolute right-40">SIGN IN</li>
-                <li className="text-gray-300 absolute right-20 mx-2">REGISTER</li>
+                <li className="text-gray-300 absolute right-8">REGISTER</li>
                 
             </ul>
         </nav>
