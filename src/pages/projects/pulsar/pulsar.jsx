@@ -6,12 +6,21 @@ import pulsarimage from "/src/assets/pulsar.png"
 import "/src/index.css";
 import "/src/assets/fonts/Poppins/Poppins-Regular.ttf";
 import graph1 from "/src/assets/graph-1.png";
+import ResearchNavbar from '../../../components/ResearchNavbar';
 
 
 function pulsar() {
+  
+    const about = "/projects/pulsar/about";
+    const classify = '/projects/pulsar/classify';
+    const discuss = '/projects/pulsar/discuss';
+    const collection = '/projects/pulsar/collection';
   return (
+    
     <>
+    
     <div className='bg-black'>
+      
         {/* <div className='flex h-20'
         style={{backgroundImage:`url(${bgimage})`,boxShadow: 'rgb(42 19 135 / 50%) 0px 2px 7px',opacity:20}}>
             <img className='self-center w-20 h-20 rounded-full ml-14 my-5 border-2' src="/src/assets/pulsar-logo.jpg" alt="" />
@@ -19,15 +28,25 @@ function pulsar() {
         </div> */}
 
     </div>
+    
     <div className="Project-homepage flex flex-col">
+    
         <div className="project-page-background relative inline-block m-0 p-0">
             <picture>
               <source srcSet={bgwebp} type='image/webp'/>
               <img className="w-screen h-screen " src={bgimage} loading='lazy' alt="background-pulsar-page" />
             </picture>
+            <div className="absolute top-5 left-1/2 transform -translate-x-1/2 w-auto">
+            <ResearchNavbar 
+                about={about}
+                classify={classify}
+                discuss={discuss}
+                collection={collection}/>
+            </div>
             <div className=" w-1/4 px-5 text-2xl font-semibold top-20 left-40 text-white bg-transparent absolute bg-opacity-50">
               Join the Search for Pulsars:Help Einstein@Home scientists to identify these amazing cosmic lighthouses!
               <br />
+              
               <br />
               <p className='text-sm font-thin '>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias tempore, necessitatibus amet, doloremque repellat asperiores sunt sapiente rem quae eum sint optio corporis molestiae minus commodi debitis rerum non obcaecati ullam atque cupiditate modi! ,Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora molestiae rem consectetur incidunt, voluptatibus officiis labore debitis unde! Est reiciendis exercitationem aliquid architecto, sed quo, cum dolor nesciunt tempora similique dolore odit, adipisci atque sunt eligendi? Doloribus minus quidem perferendis!</p>
               <br />
@@ -35,8 +54,8 @@ function pulsar() {
               
               
             </div>
-            <div className=" w-1/2 mx-10  text-4xl font-semibold top-20 right-0 m text-white bg-transparent absolute bg-opacity-50">
-            <img className="rounded-full border-10 border-white-700 shadow-3xl" loading="lazy" src={pulsarimage} alt="" />
+            <div className=" w-1/2 mx-8  text-4xl font-semibold top-40 right-0 m text-white bg-transparent absolute bg-opacity-50">
+            <img className="rounded-full w-4/5 h-4/5  border-10 border-white-700 shadow-3xl" loading="lazy" src={pulsarimage} alt="" />
             </div>
 
             
