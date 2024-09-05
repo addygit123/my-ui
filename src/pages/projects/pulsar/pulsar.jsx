@@ -74,17 +74,17 @@ function pulsar() {
           <div className="project-page-container w-screen h-fit flex mx-2 px-10">
           
             <a>
-            <div className="img-1  h-80 overflow-y-scroll">
+            <div className="img-1  h-[19rem] overflow-y-scroll">
               <img className="object-cover w-full" src={graph1} alt="" />
             </div>
             </a>
             <a>
-            <div className="img-1 h-80 overflow-y-scroll">
+            <div className="img-1 h-[19rem] overflow-y-scroll">
               <img className="object-cover w-full" src={graph1} alt="" />
             </div>
             </a>
             <a>
-            <div className="img-1 h-80 overflow-y-scroll">
+            <div className="img-1 h-[19rem] overflow-y-scroll">
               <img className="object-cover w-full" src={graph1} alt="" />
             </div>
             </a>

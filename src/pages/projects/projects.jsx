@@ -1,6 +1,6 @@
 import React from 'react'
-import PulsarThumbnail from "/src/assets/pulsar-thumbnail.jpg"
-import { useNavigate } from 'react-router-dom';
+import PulsarThumbnail from "/src/assets/pulsar_thumbnail.gif"
+import { redirect, useNavigate } from 'react-router-dom';
 
   
 
@@ -11,16 +11,29 @@ function projects() {
     navigate('/projects/pulsar');
   };
   return (
-    <div className='my-4 hover:py-2'>
-      <div onClick={handleClick} className=" card mx-5 my-2 hover:bg-purple-300 shadow-md hover:shadow-[0_0_25px_5px_rgba(128,0,128,0.5)] " style={{width: "75vw",display: "flex", alignItems: "center"}}>
-      <img src={PulsarThumbnail} className="card-img-top object-cover w-[18vw] h-[25vh] py-2 relative -left-[27vw] rounded-2xl mr-5" alt="..."/>
-      <div className="card-body w-3/5 fixed h-fit absolute right-14 mt-3 mr-10 ">
-        <h5 className="card-title text-3xl mb-4">Card title</h5>
-        <p className="card-text">Some quick example text to build on the card title     and make up the bulk of the card's content. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus neque reiciendis optio in necessitatibus quidem repudiandae, a asperiores cumque doloribus voluptatum qui rerum, repellendus possimus debitis praesentium eos libero esse? Maxime esse totam error.</p>
-       
-      </div>
-    </div>
-
+    <div className='min-h-screen'>
+    
+<ul  class="grid grid-cols-1 xl:grid-cols-3 gap-y-10 gap-x-6 items-start p-8">
+<li onClick={() => window.location.href = '/projects/pulsar'} class="relative flex flex-col sm:flex-row xl:flex-col items-start bg-gray-200 p-4 border-2 border-black rounded-[25px] cursor-pointer hover:bg-gray-400 hover:text-white" >
+        <div class="order-1 sm:ml-6 xl:ml-0">
+            <h3 class="mb-1 text-slate-900 font-semibold">
+                <span class="mb-1 block text-sm leading-6 text-indigo-500">Pulsars</span>Pulsars: Beacons of the Universe
+            </h3>
+            <div class="prose prose-slate prose-sm text-slate-600">
+                <p>Pulsars are rapidly spinning neutron stars that emit beams of electromagnetic radiation, acting like cosmic lighthouses.</p>
+            </div><a
+                class="group inline-flex items-center h-9 rounded-full text-sm font-semibold whitespace-nowrap px-3 focus:outline-none focus:ring-2 bg-slate-100 text-slate-700 hover:bg-slate-200 hover:text-slate-900 focus:ring-slate-500 mt-6"
+                href="">Learn
+                more<span class="sr-only">, Completely unstyled, fully accessible UI components</span>
+                <svg class="overflow-visible ml-3 text-slate-300 group-hover:text-slate-400"
+                    width="3" height="6" viewBox="0 0 3 6" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M0 0L3 3L0 6"></path>
+                </svg></a>
+        </div>
+        <img src={PulsarThumbnail} alt="" class="mb-6 shadow-md rounded-lg bg-slate-50 w-full sm:w-[17rem] sm:mb-0 xl:mb-6 xl:w-full" width="1216" height="640"/>
+    </li>
+</ul>
     </div>
   )
 }
