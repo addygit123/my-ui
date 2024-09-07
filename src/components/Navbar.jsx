@@ -10,10 +10,11 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
         <div className="relative flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center w-40">
+          <div className="flex items-center rounded-full h-fit ">
+            {/* <h4 className="font-semibold text-gray-100 px-4 text-2xl">Research</h4> */}
             <img
               onClick={() => window.location.href = '/'}
-              className="px-2 ml-4 py-2 w-40 sm:w-20 cursor-pointer"
+              className="rounded-full"
               src={research}
               alt="Name of the website"
             />
@@ -60,18 +61,18 @@ export default function Navbar() {
           </div>
 
           {/* Navbar Links */}
-          <div className="hidden sm:flex sm:items-center sm:space-x-4 ml-[12vw] flex-grow">
+          <div className="hidden sm:flex sm:items-center sm:space-x-4 ml-[20vw] flex-grow">
             <div>
             <NavLink to="/projects" className="text-gray-300 hover:text-white hover:bg-purple-700 px-3 py-2 rounded-md text-sm font-semibold">PROJECTS</NavLink>
             <NavLink to="/talk" className="text-gray-300 hover:text-white hover:bg-purple-700 px-3 py-2 rounded-md text-sm font-semibold">TALK</NavLink>
             <NavLink to="/about" className="text-gray-300 hover:text-white hover:bg-purple-700 px-3 py-2 rounded-md text-sm font-semibold">ABOUT</NavLink>
-            <NavLink to="/getinvolved" className="text-gray-300 hover:text-white hover:bg-purple-700 px-3 py-2 rounded-md text-sm font-semibold">GET INVOLVED</NavLink>
-            <NavLink to="/build" className="text-gray-300 hover:text-white hover:bg-purple-700 px-3 py-2 rounded-md text-sm font-semibold">BUILD A PROJECT</NavLink>
-            <NavLink to="/news" className="text-gray-300 hover:text-white hover:bg-purple-700 px-3 py-2 rounded-md text-sm font-semibold">NEWS</NavLink>
+            <NavLink to="https://sih-frontend-beta.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white hover:bg-purple-700 px-3 py-2 rounded-md text-sm font-semibold">GET INVOLVED</NavLink>
+            
+            
             </div>
             <div className="flex absolute right-0">
-            <a href="#" className="text-gray-300 hover:text-white hover:bg-purple-700 px-3 py-2 rounded-md text-sm font-semibold">SIGN IN</a>
-            <a href="#" className="text-gray-300 hover:text-white hover:bg-purple-700 px-3 py-2 rounded-md text-sm font-semibold">REGISTER</a>
+            <NavLink to="/login" className="text-gray-300 hover:text-white hover:bg-purple-700 px-3 py-2 rounded-md text-sm font-semibold">SIGN IN</NavLink>
+            <NavLink to="/register" className="text-gray-300 hover:text-white hover:bg-purple-700 px-3 py-2 rounded-md text-sm font-semibold">REGISTER</NavLink>
             </div>
           </div>
         </div>
@@ -79,13 +80,13 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       <div className={`${isOpen ? 'block' : 'hidden'} sm:hidden`} id="mobile-menu">
-        <div className="px-2 pt-2 pb-3 space-y-1">
+        <div className="px-4 pt-2 pb-3 space-y-1">
           <NavLink to="/projects" className="text-gray-300 hover:text-white hover:bg-purple-700 block px-3 py-2 rounded-md text-base font-semibold">PROJECTS</NavLink>
           <NavLink to="/talk" className="text-gray-300 hover:text-white hover:bg-purple-700 block px-3 py-2 rounded-md text-base font-semibold">TALK</NavLink>
           <NavLink to="/about" className="text-gray-300 hover:text-white hover:bg-purple-700 block px-3 py-2 rounded-md text-base font-semibold">ABOUT</NavLink>
           <NavLink to="/getinvolved" className="text-gray-300 hover:text-white hover:bg-purple-700 block px-3 py-2 rounded-md text-base font-semibold">GET INVOLVED</NavLink>
-          <NavLink to="/build" className="text-gray-300 hover:text-white hover:bg-purple-700 block px-3 py-2 rounded-md text-base font-semibold">BUILD A PROJECT</NavLink>
-          <NavLink to="/news" className="text-gray-300 hover:text-white hover:bg-purple-700 block px-3 py-2 rounded-md text-base font-semibold">NEWS</NavLink>
+          
+          
           <a href="#" className="text-gray-300 hover:text-white hover:bg-purple-700 block px-3 py-2 rounded-md text-base font-semibold">SIGN IN</a>
           <a href="#" className="text-gray-300 hover:text-white hover:bg-purple-700 block px-3 py-2 rounded-md text-base font-semibold">REGISTER</a>
         </div>
