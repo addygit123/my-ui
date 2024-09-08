@@ -14,6 +14,7 @@ import Classify from './pages/projects/pulsar/Classify';
 import Discuss from './pages/projects/pulsar/Discuss';
 import Collection from './pages/projects/pulsar/Collection';
 import UnderConstruction from './pages/underconstruction';
+import ExpandedView from './pages/projects/pulsar/ExpandedView';
 
 
 
@@ -38,6 +39,7 @@ export default function App() {
         <Route path="/getinvolved" element={<Link to="https://sih-frontend-beta.vercel.app/" />} />
         <Route path="/build" element={<UnderConstruction/>} />
         <Route path="/news" element={<UnderConstruction/>} />
+        <Route path="/projects/pulsar/expanded-view" element={<ExpandedView />} /> {/* New Route */}
       </Routes>
       </main>
       <Footer/>

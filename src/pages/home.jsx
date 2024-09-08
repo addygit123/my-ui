@@ -26,12 +26,12 @@ function HomePage() {
         </div>
       </div>
 
-      <section id="features" className="py-16 bg-gray-800 text-white">
+      <section id="features" className="py-16 bg-zinc-800 text-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8 text-center">Key Features</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Classify Feature */}
-            <div className="bg-gray-700 p-6 rounded-lg text-center">
+            <div className="bg-purple-800 p-6 rounded-lg text-center">
               <i className="fas fa-image text-4xl mb-4"></i>
               <h3 className="text-xl font-semibold mb-2">Classify Images</h3>
               <p>
@@ -41,7 +41,7 @@ function HomePage() {
             </div>
 
             {/* Talk Feature */}
-            <div className="bg-gray-700 p-6 rounded-lg text-center">
+            <div className="bg-purple-800 p-6 rounded-lg text-center">
               <i className="fas fa-comments text-4xl mb-4"></i>
               <h3 className="text-xl font-semibold mb-2">Talk Section</h3>
               <p>
@@ -50,7 +50,7 @@ function HomePage() {
             </div>
 
             {/* Get Involved Feature */}
-            <div className="bg-gray-700 p-6 rounded-lg text-center">
+            <div className="bg-purple-800 p-6 rounded-lg text-center">
               <i className="fas fa-lightbulb text-4xl mb-4"></i>
               <h3 className="text-xl font-semibold mb-2">Get Involved</h3>
               <p>
@@ -67,21 +67,21 @@ function HomePage() {
           <div className="flex flex-wrap">
             {/* Testimonial 1 */}
             <div className="w-full md:w-1/2 lg:w-1/3 mb-6 ">
-              <blockquote className="bg-gray-700 p-6 rounded-lg">
+              <blockquote className="bg-purple-800 p-6 rounded-lg">
                 <p className="text-lg mb-4">"This platform is amazing! It really helps me with my research."</p>
                 <cite className="block text-sm font-semibold">User Name</cite>
               </blockquote>
             </div>
             {/* Testimonial 2 */}
             <div className="w-full md:w-1/2 lg:w-1/3 mb-6 ">
-              <blockquote className="bg-gray-700 p-6 rounded-lg mr-2 ml-2">
+              <blockquote className="bg-purple-800 p-6 rounded-lg mr-2 ml-2">
                 <p className="text-lg mb-4">"A fantastic tool for collaboration and knowledge sharing. Highly recommended!"</p>
                 <cite className="block text-sm font-semibold">User Name</cite>
               </blockquote>
             </div>
             {/* Testimonial 3 */}
             <div className="w-full md:w-1/2 lg:w-1/3 mb-6">
-              <blockquote className="bg-gray-700 p-6 rounded-lg">
+              <blockquote className="bg-purple-800 p-6 rounded-lg">
                 <p className="text-lg mb-4">"I love the features and the user-friendly interface."</p>
                 <cite className="block text-sm font-semibold">User Name</cite>
               </blockquote>
@@ -90,7 +90,7 @@ function HomePage() {
         </div>
       </section>
 
-      <section id="contact" className="py-16 bg-gray-800 text-white">
+      <section id="contact" className="py-16 bg-zinc-800 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-8">Contact Us</h2>
           <p className="mb-4">Feel free to reach out to us with any questions or feedback.</p>

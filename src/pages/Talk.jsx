@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Loading from "/src/assets/Loading.gif"
 
 function Talk() {
   const [talks, setTalks] = useState([]);
@@ -56,7 +57,7 @@ function Talk() {
     }
   };
 
-  if (loading) return <div>Loading....</div>;
+  if (loading) return <div><img src={Loading} className='w-screen h-screen absolute' alt="...loading" /></div>
   if (error) return <div>Error: {error}</div>;
 
   return (

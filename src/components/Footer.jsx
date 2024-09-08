@@ -4,7 +4,7 @@ function Footer() {
   return (
     <div className=' bottom-0 w-screen h-fit flex bg-black text-gray-400'>
       <div className='flex w-screen gap-10 my-10 '>
-        <img src={research} className="w-[15vw] h-fit p-2 mr-15 ml-5" alt="Logo image" />
+        <img src={research} className="w-[8vw] h-fit p-2 mr-15 ml-5" alt="Logo image" />
         <nav className='flex gap-20  '>
             <ul>
                 <li>Projects</li>
