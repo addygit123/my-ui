@@ -1,6 +1,7 @@
 import React from 'react'
 import PulsarThumbnail from "/src/assets/pulsar_thumbnail.gif"
-import { redirect, useNavigate } from 'react-router-dom';
+
+import { useNavigate } from 'react-router-dom';
 
   
 
@@ -14,7 +15,7 @@ function projects() {
     <div className='min-h-screen'>
     
 <ul  class="grid grid-cols-1 xl:grid-cols-3 gap-y-10 gap-x-6 items-start p-8">
-<li onClick={() => window.location.href = '/projects/pulsar'} class="relative flex flex-col sm:flex-row xl:flex-col items-start bg-gray-200 p-4 border-2 border-black rounded-[25px] cursor-pointer hover:bg-gray-400 hover:text-white" >
+<li onClick={handleClick} class="relative flex flex-col sm:flex-row xl:flex-col items-start bg-gray-200 p-4 border-2 border-black rounded-[25px] cursor-pointer hover:bg-gray-400 hover:text-white" >
         <div class="order-1 sm:ml-6 xl:ml-0">
             <h3 class="mb-1 text-slate-900 font-semibold">
                 <span class="mb-1 block text-sm leading-6 text-indigo-500">Pulsars</span>Pulsars: Beacons of the Universe

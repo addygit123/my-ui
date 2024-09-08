@@ -1,6 +1,6 @@
 
-import Navbar from './components/navbar'
-import Footer from './components/footer'
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 import {BrowserRouter as Router,Route,Routes, Link} from "react-router-dom";
 import PulsarPage from "./pages/projects/pulsar/pulsar";
 import PulsarFunctions from './pages/pulsarFunctions';
