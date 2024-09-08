@@ -11,7 +11,7 @@ import Talk from './pages/Talk';
 import MainAbout from './pages/MainAbout';
 import  Projects from './pages/projects/projects';
 import Classify from './pages/projects/pulsar/classify';
-import Discuss from './pages/projects/pulsar/Discuss';
+// import Discuss from './pages/projects/pulsar/Discuss';
 import Collection from './pages/projects/pulsar/collection';
 import UnderConstruction from './pages/underconstruction';
 import ExpandedView from './pages/projects/pulsar/ExpandedView';
