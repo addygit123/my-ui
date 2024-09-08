@@ -7,11 +7,13 @@ const QuestionsById=({projectId}) =>{
   const [fetchedQuestions,setFetchedQuestions]=useState([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedOptionIndex, setSelectedOptionIndex] = useState(null);
+  const [reload, setReload] = useState(false); // Added state to trigger re-fetch
   // const [imageSet,setImageSet]=useState(null);
 
 
   useEffect(()=>{
     const fetchQuestionsById  = async()=>{
+      setLoading(true); // Start loading when fetching data
       try {
         const response = await fetch(`https://backend-1v0u.onrender.com/form/projects/${projectId}`);
         const data = await response.json();
@@ -19,6 +21,8 @@ const QuestionsById=({projectId}) =>{
 
         if (data.questions){
           setFetchedQuestions(data.questions);
+          setCurrentQuestionIndex(0); // Reset to first question
+          setSelectedOptionIndex(null); // Reset selected option
         }
         // if(data.ImageSet){
         //   setImageSet(data.ImageSet);
@@ -35,7 +39,15 @@ const QuestionsById=({projectId}) =>{
     };
     fetchQuestionsById();
 
-  },[projectId]);
+  },[projectId, reload]);
+
+  useEffect(() => {
+    // Reset selectedOptionIndex when navigating to a new question
+    if (currentQuestionIndex === 0) {
+      setSelectedOptionIndex(null);
+    }
+  }, [currentQuestionIndex]);
+
 
   const handleNextQuestion = () => {
     if (currentQuestionIndex < fetchedQuestions.length - 1) {
@@ -48,6 +60,11 @@ const QuestionsById=({projectId}) =>{
   const handleOptionClick=(index)=>{
     setSelectedOptionIndex(index);
   };
+  const handleSubmit = () => {
+    alert('Response submitted!');
+    setReload(!reload);
+  };
+
 
   const currentQuestion = fetchedQuestions[currentQuestionIndex];
 
@@ -83,10 +100,17 @@ const QuestionsById=({projectId}) =>{
                 </li>
               ))}
             </ul>
-            {currentQuestionIndex < fetchedQuestions.length - 1 && ( // Only show button if not last question
-              <button  className="mt-4 border-1 py-2 px-4 rounded-lg hover:bg-sky-500" onClick={handleNextQuestion}>Next Question</button>
-            )}
-            
+            <div className="mt-4">
+              {currentQuestionIndex < fetchedQuestions.length - 1 ? (
+                <button className="border-1 py-2 px-4 rounded-lg hover:bg-sky-500" onClick={handleNextQuestion}>
+                  Next Question
+                </button>
+              ) : (
+                <button className="border-1 py-2 px-4 rounded-lg bg-green-500 hover:bg-green-600 text-white" onClick={handleSubmit}>
+                  Submit
+                </button>
+              )}
+            </div>
           </>
           ) : (
             <div>No questions found for this project</div>
