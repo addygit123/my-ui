@@ -71,9 +71,13 @@ const QuestionsById=({projectId}) =>{
             <h2 className='capitalize mt-5 mb-4 text-xl font-semibold'>Options:</h2>
             <ul>
               {currentQuestion.option.map((opt, index) => (
-                <li className={`bg-zinc-700 m-3 py-3 rounded hover:bg-zinc-800 text-center cursor-pointer ${selectedOptionIndex === index ? 'bg-blue-500 text-white' : 'hover:bg-zinc-800'
-                  }`}
-                  onClick={() => handleOptionClick(index)}
+                <li key={index}
+                className={`m-3 py-3 rounded text-center cursor-pointer ${
+                  selectedOptionIndex === index
+                    ? 'bg-blue-500 text-white'
+                    : 'bg-zinc-700 hover:bg-zinc-800'
+                }`}
+                onClick={() => handleOptionClick(index)}
                 >
                   {opt}
                 </li>
