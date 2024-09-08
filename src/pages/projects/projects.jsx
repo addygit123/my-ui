@@ -1,5 +1,5 @@
 import React from 'react'
-import PulsarThumbnail from "/src/assets/pulsar_thumbnail.gif"
+const PulsarThumbnail = '/pulsar_thumbnail.gif';
 
 import { useNavigate } from 'react-router-dom';
 
