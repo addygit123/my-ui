@@ -1,7 +1,9 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import HomeImg from "/src/assets/homeimg.jpg"
 
 function HomePage() {
+  const navigate = useNavigate();
   return (
     <>
       <header className="bg-black text-white p-4">
@@ -20,7 +22,7 @@ function HomePage() {
         <div className="relative flex flex-col items-center justify-center h-full text-center text-white px-4">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">Research Route</h1>
           <p className="text-lg md:text-xl max-w-2xl mb-6">Unleashing the Power of Citizen Science</p>
-          <button onClick={() => window.location.href = '/projects'} className="bg-purple-800 hover:bg-purple-500 text-white font-bold py-3 px-8 rounded-full uppercase transition duration-300">
+          <button  onClick={() => navigate('/projects')} className="bg-purple-800 hover:bg-purple-500 text-white font-bold py-3 px-8 rounded-full uppercase transition duration-300">
             Get Started
           </button>
         </div>
