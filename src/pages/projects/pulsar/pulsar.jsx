@@ -17,6 +17,11 @@ function pulsar() {
     const classify = '/projects/pulsar/classify';
     const discuss = '/projects/pulsar/discuss';
     const collection = '/projects/pulsar/collection';
+
+    const handleLearnMore = () => {
+      window.open('https://en.wikipedia.org/wiki/Pulsar', '_blank');
+    };
+
   return (
     
     <>
@@ -48,7 +53,7 @@ function pulsar() {
               <br />
               <p className='text-sm font-thin '> Pulsars are the cosmic lighthouses of the universe, emitting beams of radiation that sweep across space with incredible precision. These fascinating celestial objects hold the keys to understanding the fundamental laws of physics, the nature of matter, and the dynamics of our universe. By studying pulsars, you are not just exploring distant stars; you are pushing the boundaries of human knowledge and contributing to groundbreaking discoveries.</p>
               <br />
-              <button className='hover:bg-teal-500 hover:text-white align-center font-light text-lg text-md left-1/4  text-white bg-sky-899 absolute border-4 border-teal-500 rounded-3xl px-6 py-3 '>Learn More</button>
+              <button onClick={handleLearnMore} className='hover:bg-teal-500 hover:text-white align-center font-light text-lg text-md left-1/4  text-white bg-sky-899 absolute border-4 border-teal-500 rounded-3xl px-6 py-3 '>Learn More</button>
               
               
             </div>
